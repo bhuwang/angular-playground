@@ -5,13 +5,19 @@
  */
 'use strict';
 
-eventsApp.controller("EditEventController", function ($scope) {
+eventsApp.controller("EditEventController", function ($scope, eventData) {
 
     $scope.paddingLeftRight20 = 'paddingLeftRight20';
 
     $scope.saveEvent = function (event, newEventForm) {
         if (newEventForm.$valid) {
-            window.alert('Event ' + event.name + ' saved!');
+            eventData.saveEvent(event).
+                    $promise
+                    .then(function (event) {
+                        $scope.event = event;
+                    }).catch(function (response) {
+                console.log(response);
+            });
         }
     };
 

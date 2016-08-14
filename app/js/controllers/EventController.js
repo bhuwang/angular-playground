@@ -12,10 +12,13 @@ eventsApp.controller('EventController',
             $scope.sessionColor = 'blueColor';
             $scope.sortorder = 'name';
             $scope.paddingLeftRight20 = 'paddingLeftRight20';
-            eventData.getEvent().success(function (event) {
-                $scope.event = event;
-            }).error(function (data, status, headers, config) {
-                $log.warn(data, status, headers, config);
+
+            eventData.getEvent()
+                    .$promise
+                    .then(function (event) {
+                        $scope.event = event;
+                    }).catch(function (response) {
+                console.log(response);
             });
 
             $scope.upVoteSession = function (session) {

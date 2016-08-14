@@ -35,7 +35,7 @@ and open the template in the editor.
                             <input id="eventTime" type="text" placeholder="Start and end time.." ng-model="event.time"/>
                             
                              <label for="eventLocation">Event Location:</label>
-                            <input id="eventLocation" type="text" placeholder="Adress of your event.." ng-model="event.location"/>
+                            <input id="eventLocation" type="text" placeholder="Adress of your event.." ng-model="event.location.address"/>
                             <br/>
                             
                             <input id="eventCity" type="text" class="input-small" placeholder="City..." ng-model="event.location.city"/>
@@ -61,9 +61,11 @@ and open the template in the editor.
         <script src="lib/underscore-1.4.4.min.js"></script>
         <script src="lib/bootstrap.min.js"></script>
         <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular/angular-resource.js"></script>
         <script src="js/app.js"></script>
         <script src="js/controllers/EventController.js"></script>
         <script src="js/controllers/EditEventController.js"></script>
+        <script src="js/services/EventDataService.js"></script>
         <script src="js/filters.js"></script>
     </body>
 </html>
