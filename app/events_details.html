@@ -19,8 +19,10 @@ and open the template in the editor.
                     <li><a href="/new_event.html">Create Event</a></li>
                 </ul>
             </div>
+            
             <div ng-controller="EventController" ng-class="paddingLeftRight20">
-                <img ng-src="{{event.imageUrl}}" alt="{{event.name}}"/>
+                <img ng-src="{{event.imageUrl}}" alt="{{event.name}}"/><br/><br/>
+                <button type="button" class="btn btn-primary" ng-click="scrollToSession()">Scroll To Session</button>
                 <div class="row">
                     <div class="span11">                        
                         <h2 ng-style="orangeColor" ng-bind="event.name | uppercase"></h2>
@@ -55,7 +57,7 @@ and open the template in the editor.
                     <option value="advanced">Advanced</option>
                 </select>
                 <ul class="thumbnails">
-                    <li ng-repeat="session in event.sessions | orderBy: sortorder | limitTo: 3 | filter: query">
+                    <li ng-repeat="session in event.sessions | orderBy: sortorder | limitTo: 3 | filter: query" id="session{{session.id}}">
                         <div class="row session">
                             <div class="span0 well votingWidget">
                             <div class="votingButton" ng-click="upVoteSession(session)">

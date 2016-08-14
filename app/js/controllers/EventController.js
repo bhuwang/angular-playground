@@ -6,7 +6,7 @@
 'use strict';
 
 eventsApp.controller('EventController',
-        function EventController($scope, eventData, $log) {
+        function EventController($scope, eventData, $log, $anchorScroll) {
             $scope.orangeColor = {color: 'orange'};
             $scope.purple = {color: '#5bb75b'};
             $scope.sessionColor = 'blueColor';
@@ -28,6 +28,10 @@ eventsApp.controller('EventController',
             $scope.downVoteSession = function (session) {
                 session.upVoteCount--;
             };
+            
+            $scope.scrollToSession = function(){
+                $anchorScroll();
+            }
 
         });
 

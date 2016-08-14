@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="eventsApp">
+    <head>
+        <title>Cash Sample Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/app.css"/>
+    </head>
+    <body ng-cloak>
+        <div class="container">
+            <div class="navbar-inner">
+                <ul class="nav">
+                    <li><a href="/new_event.html">Create Event</a></li>
+                </ul>
+            </div>
+            <div ng-controller="CashSampleController" ng-class="paddingLeftRight20">
+                <div class="container">
+                    <h1>Cash Sample Page</h1>
+                    <br/>
+                    Key: <input type="text" ng-model="key"/><br/>
+                    Value: <input type="text" ng-model="value"/><br/>
+                    <button type="button" class="btn" ng-click="addToCache(key,value)">Add to Cache</button>
+                    <br/>
+                    <br/>
+                    <input type="text" ng-model="keyToRead"/><br/>
+                    <h3>Value from cache: {{readFromCache(keyToRead)}}</h3>
+                    <h3>Cache Stats: {{cacheInfo()}}</h3>
+                </div>
+            </div>
+        </div>
+        
+        <!--JS libraries-->
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/underscore-1.4.4.min.js"></script>
+        <script src="lib/bootstrap.min.js"></script>
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular/angular-resource.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controllers/CacheSampleController.js"></script>
+        <script src="js/filters.js"></script>
+    </body>
+</html>
