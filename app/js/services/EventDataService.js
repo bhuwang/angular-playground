@@ -8,17 +8,20 @@
 eventsApp.factory('eventData', function ($resource) {
     var resource = $resource('http://localhost:8080/eventregistration-1.0.0/api/event/:id', {id: '@id'});
     return {
-        getEvent: function () {
+        getEvent: function (eventId) {
             /*return $http({
              method: 'GET',
              url: 'http://www.qaml.com:8080/eventregistration-1.0.0/api/event/1'
              });*/
             //using resource
-            return resource.get({id: 2});
+            return resource.get({id: eventId});
         },
         saveEvent: function (event) {
-            event.id = 9;
+            event.id = 7;
             return resource.save(event);
+        },
+        getAllEvents: function(){
+            return resource.query();
         }
     };
 })
