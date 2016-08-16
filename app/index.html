@@ -18,7 +18,10 @@ and open the template in the editor.
             <div class="navbar" ng-controller="MainMenuController">
                 <div class="navbar-inner">
                     <ul class="nav">
+                        <li><a href="#" ng-click="homePage()">Home</a></li>
                         <li><a href="#" ng-click="createEvent()">Create Event</a></li>
+                        <li><a href="#" ng-click="editProfile()">Edit Profile</a></li>
+                        <li><a href="#" ng-click="about()">About</a></li>
                     </ul>
                 </div>
             </div>
@@ -43,6 +46,8 @@ and open the template in the editor.
         <script src="js/controllers/EventListController.js"></script>
         <script src="js/controllers/EventController.js"></script>
         <script src="js/controllers/MainMenuController.js"></script>
+        <script src="/js/controllers/EditProfileController.js"></script>
+        <script src="/js/services/GravatarUrlBuilder.js"></script>
         <script src="js/services/EventDataService.js"></script>
         <script src="js/services/ExceptionHandlerService.js"></script>
     </body>

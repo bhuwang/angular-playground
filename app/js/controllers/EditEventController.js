@@ -5,7 +5,7 @@
  */
 'use strict';
 
-eventsApp.controller("EditEventController", function ($scope, eventData) {
+eventsApp.controller("EditEventController", function ($scope, eventData, $location) {
 
     $scope.paddingLeftRight20 = 'paddingLeftRight20';
 
@@ -15,6 +15,7 @@ eventsApp.controller("EditEventController", function ($scope, eventData) {
                     $promise
                     .then(function (event) {
                         $scope.event = event;
+                        $location.url("/events");
                     }).catch(function (response) {
                 console.log(response);
             });
@@ -22,7 +23,7 @@ eventsApp.controller("EditEventController", function ($scope, eventData) {
     };
 
     $scope.cancelEdit = function () {
-        window.location = "/events_details.html";
+        $location.url("/events");
     };
 });
 
