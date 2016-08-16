@@ -11,6 +11,7 @@ eventsApp
                 restrict: 'E',
                 replace: true,
                 template: "<button class='btn' ng-click='sayHello()'>Say Hello</button>",
+                priority: 1,
                 /*controller: function ($scope) {
                  $scope.sayHello = function () {
                  alert("Hello !");
@@ -23,6 +24,7 @@ eventsApp
             return{
                 restrict: 'A',
                 require: 'greeting',
+                priority: 1,
                 link: function(scope, element, attrs, controller){
                     controller.addGreeting('hei');
                 }
@@ -32,6 +34,8 @@ eventsApp
             return{
                 restrict: 'A',
                 require: 'greeting',
+                priority: 2,
+                // use terninal: true to set like do not execute the directives with lower priority
                 link: function(scope, element, attrs, controller){
                     controller.addGreeting('Namaste');
                 }
