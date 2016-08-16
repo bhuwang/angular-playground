@@ -7,7 +7,7 @@ eventsApp.directive('mySample', function ($compile) {
      * if not provided, you can use it as both attribute and element.
      */
     return{
-        // 'C' for class, 'E' for element, 'M' for comment and no restrict for *
+        // 'A' for attribute, 'C' for class, 'E' for element, 'M' for comment and no restrict for *
         restrict: 'C',
         /*
         link: function (scope, element, attrs, controller) {

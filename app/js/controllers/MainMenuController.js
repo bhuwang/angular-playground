@@ -34,4 +34,9 @@ eventsApp.controller('MainMenuController', function ($scope, $location) {
     $scope.sampleDirective = function(){
         $location.url('/sampledirective');
     }
+    
+    $scope.greeting = function(){
+        $location.url('/greeting');
+    }
+    
 });
