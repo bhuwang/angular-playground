@@ -30,4 +30,8 @@ eventsApp.controller('MainMenuController', function ($scope, $location) {
     $scope.about = function(){
         $location.url('/about');
     }
+    
+    $scope.sampleDirective = function(){
+        $location.url('/sampledirective');
+    }
 });

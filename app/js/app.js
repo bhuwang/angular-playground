@@ -33,6 +33,11 @@ var eventsApp = angular.module('eventsApp', ['ngResource', 'ngRoute']).
                             }
                         }
                     });
+            $routeProvider.when('/sampledirective',
+                    {
+                        templateUrl: 'templates/sample_directive.html',
+                        controller: 'SampleDirectiveController'
+                    });
             $routeProvider.otherwise({redirectTo: '/events'});
 
             // enable html5 routing
