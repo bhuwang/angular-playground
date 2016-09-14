@@ -1,14 +1,14 @@
-# Angular Event Registration — Demo Application for Angular JS
+# Angular Event Registration — Demo Application using Angular JS 1.x
 
 This project is a sample application demonstrating a more fully developed realistic single page
 angular application.
 
 ### Server
 
-Two Servers are provided, an ASP.NET MVC server, and a node server. If using the ASP.NET server, simply start it up in IIS. If using the node server, from the command line run "npm install" and then either "server.sh" if you are on a linux box or "server.bat" if you are on a windows box.
+Two Servers are provided, a Tomcat server, and a Apache server. Any server which support JAVA EE would work instead for backend and any server would work for front end as well. You can use IIS/node/JBOSS depending upon your experience. I have also attached the apache configuration file with this code base.
 
 ### Running the application
 
-Navigate your browser to `http://localhost:8000/` to see the app running in your browser. You may have to add the page to the url such as EventDetails.html depending on where you are at in the course. The port may be configured either in the node server or on IIS.
+Navigate your browser to `http://localhost:8000/` to see the app running in your browser. If you use different port then you may want to adjust the url in EventDataService.js file. 
 
 
