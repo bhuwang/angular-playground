@@ -9,6 +9,6 @@ Two Servers are provided, a Tomcat server, and a Apache server. Any servers whic
 
 ### Running the application
 
-Navigate your browser to `http://localhost:8000/` to see the app running in your browser. If you use different port then you may want to adjust the url in EventDataService.js file. 
+Navigate your browser to `http://localhost:8000/` to see the app running in your browser. If you use remote server or different port then you may want to adjust the url in EventDataService.js file. 
 
 
